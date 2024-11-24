@@ -1,11 +1,10 @@
 [project]
 name = "{{ cookiecutter.hyphenated }}"
-version = "0.1"
+version = "0.1.0"
 description = "{{ cookiecutter.description or "" }}"
 readme = "README.md"
 authors = [{name = "{{ cookiecutter.author_name }}"}]
-license = {text = "Apache-2.0"}
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 classifiers = [
     "License :: OSI Approved :: Apache Software License"
 ]
@@ -14,8 +13,8 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 {% if cookiecutter.github_username %}
 [project.urls]
 Homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}"
@@ -26,5 +25,24 @@ CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyph
 [project.scripts]
 {{ cookiecutter.hyphenated }} = "{{ cookiecutter.underscored }}.cli:cli"
 
-[project.optional-dependencies]
-test = ["pytest"]
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = ["E501", "SIM105", "SIM116", "UP007"]

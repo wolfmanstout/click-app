@@ -22,11 +22,11 @@ Three examples of tools that were initially created using this template:
 
 ## Usage
 
-Run `cookiecutter gh:simonw/click-app` and then answer the prompts. Here's an example run:
+Run `cookiecutter gh:wolfmanstout/click-app` and then answer the prompts. Here's an example run:
 ```
-$ cookiecutter gh:simonw/click-app
+$ cookiecutter gh:wolfmanstout/click-app
 app_name []: click app template demo
-description []: Demonstrating https://github.com/simonw/click-app
+description []: Demonstrating https://github.com/wolfmanstout/click-app
 hyphenated [click-app-template-demo]:
 underscored [click_app_template_demo]:
 github_username []: simonw

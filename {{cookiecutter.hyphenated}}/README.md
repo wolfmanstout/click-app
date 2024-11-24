@@ -9,33 +9,37 @@
 
 ## Installation
 
-Install this tool using `pip`:
+Install this tool using `pip` or `pipx`:
+
 ```bash
 pip install {{ cookiecutter.hyphenated }}
 ```
+
 ## Usage
 
 For help, run:
+
 ```bash
 {{ cookiecutter.hyphenated }} --help
 ```
+
 You can also use:
+
 ```bash
 python -m {{ cookiecutter.underscored }} --help
 ```
+
 ## Development
 
-To contribute to this tool, first checkout the code. Then create a new virtual environment:
+To contribute to this tool, use uv. The following command will establish the
+venv and run tests:
+
 ```bash
-cd {{ cookiecutter.hyphenated }}
-python -m venv venv
-source venv/bin/activate
+uv run pytest
 ```
-Now install the dependencies and test dependencies:
+
+To run {{ cookiecutter.hyphenated }} locally, use:
+
 ```bash
-pip install -e '.[test]'
-```
-To run the tests:
-```bash
-python -m pytest
+uv run {{ cookiecutter.hyphenated }}
 ```
