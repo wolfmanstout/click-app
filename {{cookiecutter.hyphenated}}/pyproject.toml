@@ -50,3 +50,4 @@ ignore = ["E501", "SIM105", "SIM116", "UP007"]
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+pythonVersion = "3.11"
