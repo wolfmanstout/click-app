@@ -63,7 +63,7 @@ You can run the default test for your tool like so:
 ```bash
 python -m pytest
 ```
-This will execute the test in `tests/test_my_new_tool.py`.
+This will execute the test in `tests/test_cli.py`.
 
 Now you can open the `my_new_tool/cli.py` file and start adding Click [commands and groups](https://click.palletsprojects.com/en/7.x/commands/).
 
