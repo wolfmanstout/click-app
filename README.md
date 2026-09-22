@@ -6,7 +6,7 @@ Use this template on your own machine with cookiecutter, or create a brand new r
 
 ## Installation
 
-You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/) installed. I recommend pipx for this:
+You'll need Git, [uv](https://docs.astral.sh/uv/), [prek](https://prek.j178.dev/), and [cookiecutter](https://cookiecutter.readthedocs.io/) installed, with your Git author name and email configured. I recommend pipx for installing Cookiecutter:
 ```bash
 pipx install cookiecutter
 ```
@@ -69,15 +69,12 @@ Now you can open the `my_new_tool/cli.py` file and start adding Click [commands 
 
 ## Creating a Git repository for your tool
 
-You can initialize a Git repository for your tool like this:
-```bash
-cd my-new-tool
-git init
-git add .
-git commit -m "Initial structure from template"
-# Rename the 'master' branch to 'main':
-git branch -m master main
-```
+The template's `hooks/post_gen_project.sh` automatically initializes a Git repository
+on `main`, installs dependencies with `uv sync`, runs `prek install`, and commits
+the generated files with the message "Initial structure from template". The first
+commit runs the configured prek checks.
+
+Keep Cookiecutter hooks enabled for this setup to run.
 ## Publishing your tool to GitHub
 
 Use https://github.com/new to create a new GitHub repository sharing the same name as your tool, which should be something like `my-new-tool`.
