@@ -9,9 +9,16 @@
 
 ## Installation
 
-Install this tool using `pip` or `pipx`:
+Install this tool with [uv](https://docs.astral.sh/uv/):
 
 ```bash
+uv tool install {{ cookiecutter.hyphenated }}
+```
+
+You can also install it with `pipx` or `pip`:
+
+```bash
+pipx install {{ cookiecutter.hyphenated }}
 pip install {{ cookiecutter.hyphenated }}
 ```
 
@@ -21,12 +28,6 @@ For help, run:
 
 ```bash
 {{ cookiecutter.hyphenated }} --help
-```
-
-You can also use:
-
-```bash
-python -m {{ cookiecutter.underscored }} --help
 ```
 
 ## Development
